@@ -1,0 +1,100 @@
+/* Estil de la pàgina */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0e4f7;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Títol que apareixerà */
+#title {
+  font-size: 2em;
+  color: #0056b3;
+  opacity: 0;
+  transform: translateY(20px);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Contenidor de la flor */
+.flower-container {
+  position: relative;
+  width: 100px;
+  height: 180px;
+  animation: grow 3s ease forwards;
+}
+
+/* Tija de la flor */
+.stem {
+  position: absolute;
+  bottom: 0;
+  width: 6px;
+  height: 100%;
+  background-color: green;
+  transform-origin: bottom;
+}
+
+/* Fulles */
+.leaf {
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  background-color: green;
+  border-radius: 50%;
+  top: 70%;
+  animation: sway 3s infinite alternate ease-in-out;
+}
+
+/* Fulla esquerra */
+.leaf-left {
+  left: -25px;
+  transform: rotate(-30deg);
+}
+
+/* Fulla dreta */
+.leaf-right {
+  right: -25px;
+  transform: rotate(30deg);
+}
+
+/* Pètals de la flor */
+.petal {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: pink;
+  border-radius: 50%;
+  top: 10px;
+  left: 50%;
+  transform-origin: center;
+  opacity: 0;
+}
+
+/* Centre de la flor */
+.center {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+  border-radius: 50%;
+  top: 25px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+/* Animacions */
+@keyframes grow {
+  from { height: 0; }
+  to { height: 180px; }
+}
+
+@keyframes sway {
+  from { transform: rotate(-10deg); }
+  to { transform: rotate(10deg); }
+}
