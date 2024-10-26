@@ -5,7 +5,7 @@
   height: 180px;
   animation: grow 3s ease forwards;
   display: flex;
-  align-items: center;
+  align-items: flex-end; /* Ajustat per centrar millor la flor */
   justify-content: center;
 }
 
@@ -53,10 +53,11 @@
 }
 
 /* Col·locació dels pètals al voltant del centre */
-.petal1 { top: -20px; left: 0; }
-.petal2 { top: 10px; left: -20px; }
-.petal3 { top: 10px; right: -20px; }
-.petal4 { bottom: -10px; left: 0; }
+.petal1 { top: -25px; left: 50%; transform: translateX(-50%); }
+.petal2 { top: -10px; left: 25%; transform: translateX(-50%); }
+.petal3 { top: -10px; right: 25%; transform: translateX(50%); }
+.petal4 { top: 10px; left: 35%; transform: translateX(-50%); }
+.petal5 { top: 10px; right: 35%; transform: translateX(50%); }
 
 /* Centre de la flor */
 .center {
@@ -65,7 +66,8 @@
   height: 20px;
   background-color: yellow;
   border-radius: 50%;
-  top: 10px;
-  left: 0;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
   opacity: 0;
 }
